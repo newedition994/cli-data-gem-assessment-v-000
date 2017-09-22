@@ -1,5 +1,2 @@
-require "shop_tops_cli_app/version"
-
-module ShopTopsCliApp
-  # Your code goes here...
-end
+require_relative "shop_tops_cli_app/version"
+require_relative './shop_tops_cli_app/cli'
