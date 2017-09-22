@@ -1,4 +1,4 @@
 #!/usr/bin/env ruby
 
-require './lib/shop_tops_cli_app'
+require './lib/environment'
 ShopTopsCliApp::CLI.new.call
