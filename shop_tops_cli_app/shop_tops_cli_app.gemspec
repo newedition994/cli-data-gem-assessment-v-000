@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "shop/tops/cli/app/version"
+require "shop_tops_cli_app/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "shop-tops-cli-app"
-  spec.version       = Shop::Tops::Cli::App::VERSION
+  spec.name          = "shop_tops_cli_app"
+  spec.version       = ShopTopsCliApp::VERSION
   spec.authors       = ["'Breyanna Vass'"]
   spec.email         = ["'breyanna.bvass@gmail.com'"]
 
