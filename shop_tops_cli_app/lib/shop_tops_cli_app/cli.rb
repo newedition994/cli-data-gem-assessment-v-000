@@ -18,9 +18,9 @@ class ShopTopsCliApp::CLI
   end
 
   def menu
-    puts "Enter the number of the categeory of the tops you would like to see or type exit to leave:"
     input = nil
     while input != "exit"
+      puts "Enter the number of the categeory of the tops you would like to see or type list to see the list again or type exit to leave:"
       input = gets.strip.downcase
       case input
       when "1"
@@ -33,6 +33,8 @@ class ShopTopsCliApp::CLI
         puts "Here's some sweaters & cardigans"
       when "5"
         puts "Here's some going-out tops"
+      when "list"
+        list_types
       else
         puts "What kind of tops would you like to see?"
       end
