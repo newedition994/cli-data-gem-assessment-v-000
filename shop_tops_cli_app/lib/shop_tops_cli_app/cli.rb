@@ -8,7 +8,7 @@ class ShopTopsCliApp::CLI
 
   def list_types
     puts "Check out these cute Tops:"
-    @shop = ShopTopsCliApp::Shop.today
+    @shop = ShopTopsCliApp::Shop.forever
   end
 
   def menu

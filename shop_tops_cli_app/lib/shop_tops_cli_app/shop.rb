@@ -1,6 +1,8 @@
 class ShopTopsCliApp::Shop
 
-  def self.today
+  attr_accessor :name, :url
+
+  def self.forever
     #should return a bunch of instances of categories
     puts <<~HEREDOC
       1. Lace-Up
@@ -28,6 +30,9 @@ class ShopTopsCliApp::Shop
     shop_5 = Shop.new
     shop_5.name = "Going Out Tops"
     shop_5.url = "https://www.forever21.com/us/shop/Catalog/Category/f21/top_going-out-tops"
+
+    [shop_1, shop_2, shop_3, shop_4, shop_5]
+
   end
 
 

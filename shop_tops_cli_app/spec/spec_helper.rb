@@ -1,2 +1,2 @@
-$LOAD_PATH.unshift File.expand_path()
+$LOAD_PATH.unshift File.expand_path("../lib")
 require 'shop_tops'
