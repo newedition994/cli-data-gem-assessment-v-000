@@ -8,13 +8,7 @@ class ShopTopsCliApp::CLI
 
   def list_types
     puts "Check out these cute Tops:"
-    puts <<~HEREDOC
-      1. Lace-Up
-      2. Tees & Tanks
-      3. Shirts & Blouses
-      4. Sweaters & Cardigans
-      5. Going Out Tops
-    HEREDOC
+    @shop = ShopTopsCliApp::Shop.today
   end
 
   def menu
