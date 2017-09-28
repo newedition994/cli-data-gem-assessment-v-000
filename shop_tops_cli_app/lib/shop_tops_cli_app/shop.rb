@@ -2,6 +2,12 @@ class ShopTopsCliApp::Shop
 
   attr_accessor :name, :url
 
+  def initialize(name, url)
+    @name = name
+    @url = url
+  end
+
+
   def self.forever
     #should return a bunch of instances of categories
     puts <<~HEREDOC

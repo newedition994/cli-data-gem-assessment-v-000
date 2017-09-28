@@ -4,4 +4,3 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # Specify your gem's dependencies in shop_tops_cli_app.gemspec
 gemspec
-gem 'test-unit'

@@ -9,6 +9,9 @@ class ShopTopsCliApp::CLI
   def list_types
     puts "Check out these cute Tops:"
     @shop = ShopTopsCliApp::Shop.forever
+    @shop.each.with_index(1) do |shop, i|
+      puts "#{i}. #{shop.name}"
+    end
   end
 
   def menu
@@ -16,21 +19,12 @@ class ShopTopsCliApp::CLI
     while input != "exit"
       puts "Enter the number of the categeory of the tops you would like to see or type list to see the list again or type exit to leave:"
       input = gets.strip.downcase
-      case input
-      when "1"
-        puts "Here's some lace-up tops"
-      when "2"
-        puts "Here's some tee & tank-tops"
-      when "3"
-        puts "Here's some shirts & blouses"
-      when "4"
-        puts "Here's some sweaters & cardigans"
-      when "5"
-        puts "Here's some going-out tops"
-      when "list"
+      if input.to_i > 0
+        puts @shop[input.to_i-1]
+      elsif input == "list"
         list_types
       else
-        puts "What kind of tops would you like to see?"
+        puts "Do you know what you want, type list or exit."
       end
     end
   end
