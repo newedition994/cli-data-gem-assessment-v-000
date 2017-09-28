@@ -1,8 +1,6 @@
 # ShopTopsCliApp
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/shop_tops_cli_app`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This gem is about finding the right top for various occasions in a woman's life. First you will install the shop_tops_cli_app gem into your ruby terminal. Then follow the steps to see 5 categories for lady's tops and see the options that come from each category. Have fun shopping !!!
 
 ## Installation
 
@@ -21,8 +19,12 @@ Or install it yourself as:
     $ gem install shop_tops_cli_app
 
 ## Usage
+Instructions
 
-TODO: Write usage instructions here
+1. User types in shop_tops
+2. Request top category based on correlating numbers.
+3. Submit another number that correlates to one of the tops in a specific category.
+4. Return to list category or exit the program.
 
 ## Development
 
