@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require "shop_tops_cli_app"
+require_relative "../lib/environment"
+#require "shop_tops_cli_app"
 
 
 # You can add fixtures and/or initialization code here to make experimenting
@@ -11,7 +12,7 @@ require "shop_tops_cli_app"
 # require "pry"
 # Pry.start
 
-#This link might, but terminal crashes ask for helphttps://stackoverflow.com/questions/29971864/running-bin-console-returns-no-such-file-or-directory
+#This link might, but terminal crashes ask for help https://stackoverflow.com/questions/29971864/running-bin-console-returns-no-such-file-or-directory
 
 
 
