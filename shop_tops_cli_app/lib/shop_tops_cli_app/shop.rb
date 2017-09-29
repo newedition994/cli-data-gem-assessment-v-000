@@ -16,13 +16,16 @@ class ShopTopsCliApp::Shop
   def self.scrape_shop
     shop = []
 
-    shop << self.scrape_forever21s
-    
+    shop << self.scrape_forever21
     #Go to forever21 tops categeory, find various top sections
     #extract the sections
     #instantiate the top sections
     shop
   end
 
+  def self.scrape_forever21
+    doc = Nokogiri::HTML(open("https://www.forever21.com/us/shop/Catalog/Category/f21/top_blouses"))
+    binding.pry
+  end
 
 end
