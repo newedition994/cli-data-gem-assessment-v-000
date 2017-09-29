@@ -19,8 +19,10 @@ class ShopTopsCliApp::CLI
     while input != "exit"
       puts "Enter the number of the categeory of the tops you would like to see or type list to see the list again or type exit to leave:"
       input = gets.strip.downcase
+
       if input.to_i > 0
-        puts @shop[input.to_i-1]
+        the_shop = @shop[input.to_i-1]
+        puts "#{the_shop.name} - #{the_shop.url}"
       elsif input == "list"
         list_types
       else

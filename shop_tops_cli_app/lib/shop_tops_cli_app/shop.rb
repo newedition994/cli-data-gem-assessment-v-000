@@ -10,13 +10,7 @@ class ShopTopsCliApp::Shop
 
   def self.forever
     #should return a bunch of instances of categories
-    puts <<~HEREDOC
-      "1. Lace-Up
-      2. Tees & Tanks
-      3. Shirts & Blouses
-      4. Sweaters & Cardigans
-      5. Going Out Tops"
-    HEREDOC
+    
     shop_1 = self.new
     shop_1.name = "Lace-Up"
     shop_1.url = "https://www.forever21.com/us/shop/Catalog/Category/f21/top_blouses-lace-up"
