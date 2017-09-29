@@ -15,6 +15,9 @@ class ShopTopsCliApp::Shop
 
   def self.scrape_shop
     shop = []
+
+    shop << self.scrape_forever21s
+    
     #Go to forever21 tops categeory, find various top sections
     #extract the sections
     #instantiate the top sections
