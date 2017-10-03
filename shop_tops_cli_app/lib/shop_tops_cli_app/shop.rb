@@ -9,22 +9,23 @@ class ShopTopsCliApp::Shop
 
 
   def self.forever
-    #Scrape forever21 tops sections and then return products and prices based on the data
+    #Scrape ebay tops sections and then return products and prices based on the data
     self.scrape_shop
   end
 
   def self.scrape_shop
     shop = []
 
-    shop << self.scrape_forever21
+    shop << self.scrape_ebay
     #Go to forever21 tops categeory, find various top sections
     #extract the sections
     #instantiate the top sections
     shop
   end
 
-  def self.scrape_forever21
-    doc = Nokogiri::HTML(open("https://www.forever21.com/us/shop/Catalog/Category/f21/top_blouses"))
+  def self.scrape_ebay
+    doc = Nokogiri::HTML(open("https://www.ebay.com/b/Womens-Tops-Blouses/53159/bn_661824"))
+    sleep 15
     binding.pry
   end
 

@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Breyanna Vass'"]
   spec.email         = ["'breyanna.bvass@gmail.com'"]
 
-  spec.summary       = %q{Use the bundle to get different categories of tops and see various types of tops available at forever21.com}
-  spec.description   = %q{Shops tops from forever 21}
+  spec.summary       = %q{Use the bundle to get different categories of tops and see various types of tops available at ebay.com}
+  spec.description   = %q{Shops tops from ebay}
   spec.homepage      = "https://github.com/newedition994/cli-data-gem-assessment-v-000"
   spec.license       = "MIT"
 
