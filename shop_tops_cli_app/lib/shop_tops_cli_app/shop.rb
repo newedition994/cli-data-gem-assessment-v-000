@@ -25,9 +25,9 @@ class ShopTopsCliApp::Shop
 
   def self.scrape_ebay
     doc = Nokogiri::HTML(open("https://www.ebay.com/b/Womens-Tops-Blouses/53159/bn_661824"))
-    name = doc.search('p.b-guidancecard__title')[0..4].text
+    name = doc.search('p.b-guidancecard__title')[0..4].text.strip
     url = doc.search('a.b-guidancecard__link').first.attr('href')
-    binding.pry
+    #binding.pry
   end
 
 end
