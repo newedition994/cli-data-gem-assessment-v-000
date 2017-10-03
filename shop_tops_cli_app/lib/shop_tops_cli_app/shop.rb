@@ -24,8 +24,9 @@ class ShopTopsCliApp::Shop
   end
 
   def self.scrape_ebay
-    doc = Nokogiri::HTML(open("https://www.ebay.com/b/Womens-Tops-Blouses/53159/bn_661824"))
-    sleep 15
+    doc = Nokogiri::HTML(open("https://www.ebay.com/b/Off-Shoulder-Sleeve-Tops-Blouses-for-Women/53159/bn_5219291"))
+    name = doc.search('h1.b-pageheader').text
+    #sleep 15
     binding.pry
   end
 

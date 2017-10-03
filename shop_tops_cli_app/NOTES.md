@@ -6,11 +6,11 @@ User will type in Shop Tops
 
 Shows a variety of top categories
 
-  1. Lace-Up
-  2. Tees & Tanks
-  3. Shirts & Blouses
-  4. Sweaters & Cardigans
-  5. Going Out Tops
+  1. Off the Shoulder
+  2. Blouses
+  3. Tunic Tops
+  4. Tanks and Camis
+  5. Button Down Shirts
 
 Then request to see the tops
 
