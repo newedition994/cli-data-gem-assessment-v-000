@@ -17,16 +17,16 @@ class ShopTopsCliApp::Shop
     shop = []
 
     shop << self.scrape_ebay
-    #Go to forever21 tops categeory, find various top sections
+    #Go to ebay tops categeory, find various top sections
     #extract the sections
     #instantiate the top sections
     shop
   end
 
   def self.scrape_ebay
-    doc = Nokogiri::HTML(open("https://www.ebay.com/b/Off-Shoulder-Sleeve-Tops-Blouses-for-Women/53159/bn_5219291"))
-    name = doc.search('h1.b-pageheader').text
-    #sleep 15
+    doc = Nokogiri::HTML(open("https://www.ebay.com/b/Womens-Tops-Blouses/53159/bn_661824"))
+    name = doc.search('p.b-guidancecard__title')[0..4].text
+    url = doc.search('a.b-guidancecard__link').first.attr('href')
     binding.pry
   end
 
