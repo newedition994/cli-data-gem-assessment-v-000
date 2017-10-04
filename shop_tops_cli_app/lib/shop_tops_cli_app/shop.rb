@@ -36,18 +36,26 @@ class ShopTopsCliApp::Shop
 
   def self.scrape_blouses
     doc = Nokogiri::HTML(open("https://www.ebay.com/b/Womens-Blouses/53159/bn_649768"))
+    #shop.name =
+    #shop.url =
   end
 
   def self.scrape_tunic
     doc = Nokogiri::HTML(open("https://www.ebay.com/b/Tunic-Tops/53159/bn_635701"))
+    #shop.name =
+    #shop.url =
   end
 
   def self.scrape_tank
     doc = Nokogiri::HTML(open("https://www.ebay.com/b/Womens-Tank-Cami-Tops-Blouses/53159/bn_652021"))
+    #shop.name =
+    #shop.url =
   end
 
   def self.scrape_button
     doc = Nokogiri::HTML(open("https://www.ebay.com/b/Button-Down-Shirts-for-Women/53159/bn_628831"))
+    #shop.name =
+    #shop.url =
   end
 
 end
