@@ -8,9 +8,9 @@ class ShopTopsCliApp::CLI
 
   def list_types
     puts "Check out these cute Tops:"
-    @shop = ShopTopsCliApp::Shop.forever
-    @shop.each.with_index(1) do |shop, i|
-      puts "#{i}. #{shop.name}"
+    @shop = ShopTopsCliApp::Clothing.forever
+    @shop.each.with_index(1) do |clothing, i|
+      puts "#{i}. #{clothing.name}"
     end
   end
 
@@ -21,8 +21,8 @@ class ShopTopsCliApp::CLI
       input = gets.strip.downcase
 
       if input.to_i > 0
-        the_shop = @shop[input.to_i-1]
-        puts "#{the_shop.name} - #{the_shop.url}"
+        the_clothing = @clothing[input.to_i-1]
+        puts "#{the_clothing.name} - #{the_clothing.url}"
       elsif input == "list"
         list_types
       else
