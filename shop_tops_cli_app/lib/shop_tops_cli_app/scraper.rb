@@ -9,7 +9,7 @@
   end
 
   def choose_top_types
-
+    ShopTopsCliApp::Clothing
   end
 
 

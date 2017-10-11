@@ -9,6 +9,9 @@ class ShopTopsCliApp::Clothing
     @url = url
   end
 
+  def self.all
+    @@all
+  end
 
   def self.forever
     #Scrape ebay tops sections and then return products and prices based on the data
@@ -19,7 +22,6 @@ class ShopTopsCliApp::Clothing
     clothing = []
 
     clothing << self.scrape_shoulder
-    #Go to ebay tops categeory, find various top sections
     #extract the sections
     #instantiate the top sections
     clothing
