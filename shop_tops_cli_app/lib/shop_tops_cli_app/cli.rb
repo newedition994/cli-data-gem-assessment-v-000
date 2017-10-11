@@ -31,6 +31,14 @@ class ShopTopsCliApp::CLI
     end
   end
 
+  #def print_tops
+    #puts ""
+    #puts "------#{the_clothing.name}--------"
+    #puts "top name"
+    #puts "top price"
+    #puts "shipping cost"
+  #end
+
   def come_again
     puts "Sorry to see you leave. Please come again."
   end
