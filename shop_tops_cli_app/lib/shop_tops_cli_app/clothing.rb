@@ -15,10 +15,11 @@ class ShopTopsCliApp::Clothing
   end
 
 
-  def initialize
+  def initialize(name=nil, url=nil, price=nil)
     @name = name
     @url = url
     @price = price
+    @@all << self
   end
 
   def self.all
@@ -39,13 +40,16 @@ class ShopTopsCliApp::Clothing
     clothing
   end
 
-  def self.scrape_shoulder
-    doc = Nokogiri::HTML(open("https://www.ebay.com/b/Womens-Tops-Blouses/53159/bn_661824"))
-    name = doc.search('a.b-guidancecard__link').text
-    url = 5.times do |i|
-        puts doc.css('a.b-guidancecard__link')[i].attribute('href').text
-      end
-    binding.pry
+  def top_name
+    @name ||= doc.css("").text
+  end
+
+  def top_url
+    @url ||= doc.css("").text
+  end
+
+  def top_price
+    @price ||= doc.css("").text
   end
 
 
