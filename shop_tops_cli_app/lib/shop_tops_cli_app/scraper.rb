@@ -5,11 +5,13 @@
   end
 
   def scrape_tops
-
+    self.get_page.css("div#x-carousel li")[0..4]
   end
 
   def choose_top_types
-    ShopTopsCliApp::Clothing
+    scrape_tops.each do |t|
+      ShopTopsCliApp::Clothing.new_from_index_page(t)
+    end
   end
 
 
