@@ -1,9 +1,7 @@
 #!/usr/bin/env ruby
 
 require "bundler/setup"
-require_relative "../lib/environment"
-
-
+require "weather_forecast"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -11,10 +9,6 @@ require_relative "../lib/environment"
 # (If you use this, don't forget to add pry to your Gemfile!)
 # require "pry"
 # Pry.start
-
-#This link might, but terminal crashes ask for help https://stackoverflow.com/questions/29971864/running-bin-console-returns-no-such-file-or-directory
-
-
 
 require "irb"
 IRB.start(__FILE__)

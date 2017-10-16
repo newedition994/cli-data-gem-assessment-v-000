@@ -1,17 +1,17 @@
 # coding: utf-8
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "shop_tops_cli_app/version"
+require "weather_forecast/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "shop_tops_cli_app"
-  spec.version       = ShopTopsCliApp::VERSION
+  spec.name          = "weather_forecast"
+  spec.version       = WeatherForecast::VERSION
   spec.authors       = ["'Breyanna Vass'"]
   spec.email         = ["'breyanna.bvass@gmail.com'"]
 
-  spec.summary       = %q{Use the bundle to get different categories of tops and see various types of tops available at ebay.com}
-  spec.description   = %q{Shops tops from ebay}
-  spec.homepage      = "https://github.com/newedition994/cli-data-gem-assessment-v-000"
+  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
+  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -32,9 +32,4 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "pry"
-
-  spec.add_dependency "nokogiri"
-
 end
