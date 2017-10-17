@@ -1,5 +1,9 @@
-require "weather_forecast/version"
+require 'rest-client'
+require 'json'
+require 'pry'
 
-module WeatherForecast
-  # Your code goes here...
-end
+
+require "weather_forecast/version"
+require "weather_forecast/api"
+require "weather_forecast/cli"
+require "weather_forecast/forecast"
