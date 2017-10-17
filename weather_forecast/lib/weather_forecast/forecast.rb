@@ -4,14 +4,16 @@ class WeatherForecast::Forecast
 
   def self.new_from_json(fore_info)
     self.new(
-    fore_info[""],
-    fore_info[""],
-    fore_info[""]
+    fore_info["temperature"],
+    fore_info["humidity"],
+    fore_info["windSpeed"]
     )
   end
 
-  def initialize()
-
+  def initialize(temperature=nil, humidity=nil, windSpeed=nil)
+    @temperature = temperature
+    @humidity = humidity
+    @windSpeed = windSpeed
     @@all << self
   end
 
@@ -21,6 +23,14 @@ class WeatherForecast::Forecast
 
   def self.find()
     self.all[]
+  end
+
+  def humidity
+    @humidity
+  end
+
+  def windSpeed
+    @windSpeed
   end
 
 end

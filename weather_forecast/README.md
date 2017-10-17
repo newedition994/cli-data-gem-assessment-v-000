@@ -22,7 +22,11 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Instructions:
+
+1. Type in your longitude and latitude
+2. Ask for more information based on location
+
 
 ## Development
 
