@@ -9,6 +9,7 @@ class WeatherForecast::Forecast
     fore_info["windSpeed"]
     )
   end
+#longitude = fore_info
 
   def initialize(temperature=nil, humidity=nil, windSpeed=nil)
     @temperature = temperature
@@ -22,7 +23,7 @@ class WeatherForecast::Forecast
   end
 
   def self.find()
-    self.all[]
+    self.all.detect
   end
 
   def humidity
