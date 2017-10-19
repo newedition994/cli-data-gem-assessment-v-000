@@ -1,5 +1,5 @@
 class WeatherForecast::Forecast
-  attr_reader
+  attr_reader :temperature
   @@all = []
 
   def self.new_from_json(fore_info)
