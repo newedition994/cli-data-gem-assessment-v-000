@@ -1,28 +1,43 @@
 class WeatherForecast::CLI
 
   def call
-    WeatherForecast::API.list_of_cities
+    #WeatherForecast::API.list_of_cities
     puts " Welcome to the Weather API!"
+    puts ""
     menu
     goodbye
   end
 
-  def list_of_cities
+  #def list_of_cities
     #List of popular cities longitude and latitude
-    WeatherForecast::Forecast
-      #puts 5 cities numbered and city names
-  end
+    ##end
 
 
   def menu
-    input = nil
-    puts "----- Please choose a City -----"
-    list_of_cities
-    input = gets.strip.downcase
-    if input == "exit"
-      goodbye
-    else
-      its = input.to_i
+    puts "Please choose one of the following cities:"
+    puts "1. New York, New York"
+    puts "2. London, England"
+    puts "3. Tokyo, Japan"
+    puts "4. Toronto, Canada"
+    puts "5. Rio de Janeiro, Brazil"
+
+    input = gets.strip.to_i
+    if input == 1
+      WeatherForecast::Forecast.new_york
+      WeatherForecast::API.current_location(latitude, longitude)
+    elsif input == 2
+      WeatherForecast::Forecast.london
+      WeatherForecast::API.current_location(latitude, longitude)
+    elsif input == 3
+      WeatherForecast::Forecast.tokyo
+      WeatherForecast::API.current_location(latitude, longitude)
+    elsif input == 4
+      WeatherForecast::Forecast.toronto
+      WeatherForecast::API.current_location(latitude, longitude)
+    elsif input == 5
+      WeatherForecast::Forecast.rio_de_janeiro
+      WeatherForecast::API.current_location(latitude, longitude)
+
     end
     #puts "Please enter your latitude:"
     #latitude = gets.strip.to_f
