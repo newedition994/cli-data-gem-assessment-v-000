@@ -1,7 +1,6 @@
 class WeatherForecast::CLI
 
   def call
-    #WeatherForecast::API.list_of_cities
     puts " Welcome to the Weather API!"
     puts ""
     menu
