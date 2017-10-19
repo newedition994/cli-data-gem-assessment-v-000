@@ -15,8 +15,15 @@ class WeatherForecast::CLI
 
 
   def menu
-    #provide more information
-    #create a loop
+    input = nil
+    puts "----- Please choose a City -----"
+    list_of_cities
+    input = gets.strip.downcase
+    if input == "exit"
+      goodbye
+    else
+      its = input.to_i
+    end
     #puts "Please enter your latitude:"
     #latitude = gets.strip.to_f
     #puts "Please enter your longitude:"
