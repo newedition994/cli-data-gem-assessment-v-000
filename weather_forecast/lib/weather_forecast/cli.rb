@@ -37,7 +37,6 @@ class WeatherForecast::CLI
     elsif input == 5
       WeatherForecast::Forecast.rio_de_janeiro
       WeatherForecast::API.current_location(latitude, longitude)
-
     end
     #puts "Please enter your latitude:"
     #latitude = gets.strip.to_f

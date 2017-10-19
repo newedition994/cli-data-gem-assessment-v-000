@@ -36,29 +36,28 @@ class WeatherForecast::Forecast
   end
 
   def new_york
-    #google the longitude and latitude for New York
     @latitude = 40.7128
     @longitude = 74.0060
   end
 
   def london
-    @latitude =
-    @longitude =
+    @latitude = 51.5074
+    @longitude = 0.1278
   end
 
   def tokyo
-    @latitude =
-    @longitude =
+    @latitude = 35.6895
+    @longitude = 139.6917
   end
 
   def toronto
-    @latitude =
-    @longitude =
+    @latitude = 43.6532
+    @longitude = 79.3832
   end
 
   def rio_de_janeiro
-    @latitude =
-    @longitude =
+    @latitude = 22.9068
+    @longitude = 43.1729
   end
 
 end
