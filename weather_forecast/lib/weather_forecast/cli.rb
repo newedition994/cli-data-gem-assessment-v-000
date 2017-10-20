@@ -21,8 +21,8 @@ class WeatherForecast::CLI
     puts "5. Rio de Janeiro, Brazil"
 
     input = gets.strip.to_i
-    latitude = WeatherForecast::Forecast.latitude
-    longitude = WeatherForecast::Forecast.longitude
+    latitude = WeatherForecast::Forecast.latitude(input)
+    longitude = WeatherForecast::Forecast.longitude(input)
     WeatherForecast::API.current_location(latitude, longitude)
     #puts "Please enter your latitude:"
     #latitude = gets.strip.to_f
