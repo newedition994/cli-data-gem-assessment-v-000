@@ -29,7 +29,7 @@ class WeatherForecast::CLI
     #puts "Please enter your longitude:"
     #longitude = gets.strip.to_f
   end
-
+#you have to do a gem install RestClient everytime you open IDE
   def goodbye
     puts "See you tomorrow for the temperature"
     exit
