@@ -21,22 +21,9 @@ class WeatherForecast::CLI
     puts "5. Rio de Janeiro, Brazil"
 
     input = gets.strip.to_i
-    if input == 1
-      WeatherForecast::Forecast.new_york
-      WeatherForecast::API.current_location(latitude, longitude)
-    elsif input == 2
-      WeatherForecast::Forecast.london
-      WeatherForecast::API.current_location(latitude, longitude)
-    elsif input == 3
-      WeatherForecast::Forecast.tokyo
-      WeatherForecast::API.current_location(latitude, longitude)
-    elsif input == 4
-      WeatherForecast::Forecast.toronto
-      WeatherForecast::API.current_location(latitude, longitude)
-    elsif input == 5
-      WeatherForecast::Forecast.rio_de_janeiro
-      WeatherForecast::API.current_location(latitude, longitude)
-    end
+    latitude = WeatherForecast::Forecast.latitude
+    longitude = WeatherForecast::Forecast.longitude
+    WeatherForecast::API.current_location(latitude, longitude)
     #puts "Please enter your latitude:"
     #latitude = gets.strip.to_f
     #puts "Please enter your longitude:"

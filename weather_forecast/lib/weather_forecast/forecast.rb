@@ -2,6 +2,7 @@ class WeatherForecast::Forecast
   attr_reader :temperature, :humidity, :windSpeed
   attr_accessor :longitude, :latitude
   @@all = []
+  @@latitude
 
   def self.new_from_json(fore_info)
     self.new(
@@ -35,29 +36,34 @@ class WeatherForecast::Forecast
     @windSpeed
   end
 
-  def new_york
-    @latitude = 40.7128
-    @longitude = 74.0060
+  def self.latitude(input)
+    case input
+    when 1
+      40.7128
+    when 2
+      51.5074
+    when 3
+      35.6895
+    when 4
+      43.6532
+    when 5
+      22.9068
+    end
   end
 
-  def london
-    @latitude = 51.5074
-    @longitude = 0.1278
-  end
-
-  def tokyo
-    @latitude = 35.6895
-    @longitude = 139.6917
-  end
-
-  def toronto
-    @latitude = 43.6532
-    @longitude = 79.3832
-  end
-
-  def rio_de_janeiro
-    @latitude = 22.9068
-    @longitude = 43.1729
+  def self.longitude(input)
+    case input
+    when 1
+      74.0060
+    when 2
+      0.1278
+    when 3
+      139.6917
+    when 4
+      79.3832
+    when 5
+      43.1729
+    end
   end
 
 end
