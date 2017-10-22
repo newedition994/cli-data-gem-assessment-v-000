@@ -7,9 +7,13 @@ class WeatherForecast::CLI
     goodbye
   end
 
-  #def list_of_cities
+  def list_of_cities
     #List of popular cities longitude and latitude
-    ##end
+    input = gets.strip.to_i
+    latitude = WeatherForecast::Forecast.latitude(input)
+    longitude = WeatherForecast::Forecast.longitude(input)
+    WeatherForecast::API.current_location(latitude, longitude)
+  end
 
 
   def menu
@@ -24,6 +28,7 @@ class WeatherForecast::CLI
     latitude = WeatherForecast::Forecast.latitude(input)
     longitude = WeatherForecast::Forecast.longitude(input)
     WeatherForecast::API.current_location(latitude, longitude)
+    #create a if statement for more details
     #puts "Please enter your latitude:"
     #latitude = gets.strip.to_f
     #puts "Please enter your longitude:"
