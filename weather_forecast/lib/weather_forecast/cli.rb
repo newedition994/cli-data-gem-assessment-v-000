@@ -7,15 +7,6 @@ class WeatherForecast::CLI
     goodbye
   end
 
-  def list_of_cities
-    #List of popular cities longitude and latitude
-    input = gets.strip.to_i
-    latitude = WeatherForecast::Forecast.latitude(input)
-    longitude = WeatherForecast::Forecast.longitude(input)
-    WeatherForecast::API.current_location(latitude, longitude)
-  end
-
-
   def menu
     puts "Please choose one of the following cities:"
     puts "1. New York, New York"
@@ -38,6 +29,14 @@ class WeatherForecast::CLI
   def goodbye
     puts "See you tomorrow for the temperature"
     exit
+  end
+
+  def list_of_cities
+    #List of popular cities longitude and latitude
+    input = gets.strip.to_i
+    latitude = WeatherForecast::Forecast.latitude(input)
+    longitude = WeatherForecast::Forecast.longitude(input)
+    WeatherForecast::API.current_location(latitude, longitude)
   end
 
   def forecast_details(fore_input)
