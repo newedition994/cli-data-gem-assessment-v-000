@@ -18,6 +18,7 @@ class WeatherForecast::CLI
     input = gets.strip.to_i
     latitude = WeatherForecast::Forecast.latitude(input)
     longitude = WeatherForecast::Forecast.longitude(input)
+    binding.pry
     WeatherForecast::API.current_location(latitude, longitude)
     #create a if statement for more details
     #puts "Please enter your latitude:"
