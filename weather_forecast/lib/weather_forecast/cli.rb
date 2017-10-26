@@ -15,10 +15,9 @@ class WeatherForecast::CLI
     puts "4. Toronto, Canada"
     puts "5. Rio de Janeiro, Brazil"
 
-    input = gets.strip.to_i
+    input = gets.strip.to_f
     latitude = WeatherForecast::Forecast.latitude(input)
     longitude = WeatherForecast::Forecast.longitude(input)
-    binding.pry
     WeatherForecast::API.current_location(latitude, longitude)
     #create a if statement for more details
     #puts "Please enter your latitude:"
