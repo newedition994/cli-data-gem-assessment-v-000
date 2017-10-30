@@ -1,19 +1,21 @@
 class WeatherForecast::Forecast
-  attr_accessor :longitude, :latitude, :temperature, :humidity, :windSpeed
+  attr_accessor :longitude, :latitude, :temperature, :humidity, :windSpeed, :location
   @@all = []
 
 #Pull up the sticky notes for questions with the meeting with the TA to make sure that all of the classes work and the irb works for testing
-  def self.new_from_json(fore_info)
+  def self.new_from_json(fore_info, location)
     binding.pry
-    self.new(
-      fore_info["temperature"],
-      fore_info["humidity"],
-      fore_info["windSpeed"]
-    )
+      self.new(
+        fore_info["temperature"],
+        fore_info["humidity"],
+        fore_info["windSpeed"],
+        location
+      )
   end
 #longitude = fore_info
 
-  def initialize(temperature=nil, humidity=nil, windSpeed=nil)
+  def initialize(temperature=nil, humidity=nil, windSpeed=nil, location=nil)
+    @location = location
     @temperature = temperature
     @humidity = humidity
     @windSpeed = windSpeed
@@ -36,34 +38,13 @@ class WeatherForecast::Forecast
     @windSpeed
   end
 
-  def self.latitude(input)
-    case input
-    when 1
-      40.7128
-    when 2
-      51.5074
-    when 3
-      35.6895
-    when 4
-      43.6532
-    when 5
-      22.9068
-    end
+  def self.getWeather
+    WeatherForecast::API.current_location(40.7128, 74.0060, "New York")
+    WeatherForecast::API.current_location(51.5074,0.1278, "")
+    WeatherForecast::API.current_location(35.6895,139.6917)
+    WeatherForecast::API.current_location(43.6532,79.3832)
+    WeatherForecast::API.current_location(22.9068,43.1729)
   end
 
-  def self.longitude(input)
-    case input
-    when 1
-      74.0060
-    when 2
-      0.1278
-    when 3
-      139.6917
-    when 4
-      79.3832
-    when 5
-      43.1729
-    end
-  end
 
 end

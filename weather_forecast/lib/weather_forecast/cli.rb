@@ -1,6 +1,8 @@
 class WeatherForecast::CLI
 
   def call
+    WeatherForecast::Forecast.getWeather
+    binding.pry
     puts " Welcome to the Weather API!"
     puts ""
     menu
