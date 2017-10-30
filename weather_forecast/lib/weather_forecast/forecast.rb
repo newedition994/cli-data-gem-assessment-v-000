@@ -6,9 +6,9 @@ class WeatherForecast::Forecast
   def self.new_from_json(fore_info)
     binding.pry
     self.new(
-      fore_info["currently"]["temperature"],
-      fore_info["currently"]["humidity"],
-      fore_info["currently"]["windSpeed"]
+      fore_info["temperature"],
+      fore_info["humidity"],
+      fore_info["windSpeed"]
     )
   end
 #longitude = fore_info

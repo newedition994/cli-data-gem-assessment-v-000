@@ -4,7 +4,7 @@ class WeatherForecast::API
   def self.current_location(latitude,longitude)
     forecast = RestClient.get("https://api.darksky.net/forecast/8a97fe8519f98871538db916a4f13fde/#{latitude},#{longitude}")
     @forecast_hash = JSON.parse(forecast)
-    @forecast_hash.each do |fore_info|
+    @forecast_hash["currently"].each do |fore_info|
       binding.pry
       WeatherForecast::Forecast.new_from_json(fore_info)
     end
