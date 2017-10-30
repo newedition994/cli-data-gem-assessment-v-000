@@ -2,7 +2,7 @@ class WeatherForecast::CLI
 
   def call
     WeatherForecast::Forecast.getWeather
-    binding.pry
+
     puts " Welcome to the Weather API!"
     puts ""
     menu
@@ -19,9 +19,7 @@ class WeatherForecast::CLI
     puts "5. Rio de Janeiro, Brazil"
 
     input = gets.strip.to_f
-    latitude = WeatherForecast::Forecast.latitude(input)
-    longitude = WeatherForecast::Forecast.longitude(input)
-    WeatherForecast::API.current_location(latitude, longitude)
+    WeatherForecast::API.current_location(latitude,longitude,location)
     if input == "exit"
       goodbye
     else
