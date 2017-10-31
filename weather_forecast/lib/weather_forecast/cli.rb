@@ -18,8 +18,11 @@ class WeatherForecast::CLI
     puts "4. Toronto, Canada"
     puts "5. Rio de Janeiro, Brazil"
 
-    input = gets.strip.to_f
+    input = gets.strip.to_i
+    #latitude = WeatherForecast::Forecast.latitude(input)
+    #longitude = WeatherForecast::Forecast.longitude(input)
     WeatherForecast::API.current_location(latitude,longitude,location)
+    #move the api line within the if statements and breakdown each part to finish the project
     if input == "exit"
       goodbye
     else
