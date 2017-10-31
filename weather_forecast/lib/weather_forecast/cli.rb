@@ -1,5 +1,5 @@
 class WeatherForecast::CLI
-
+  #attr_accessor :latitude, :longitude, :location
   def call
     WeatherForecast::Forecast.getWeather
 
@@ -12,23 +12,19 @@ class WeatherForecast::CLI
   def menu
     input = nil
     puts "------ Please choose one of the following cities ------"
-    puts "1. New York, New York"
-    puts "2. London, England"
-    puts "3. Tokyo, Japan"
-    puts "4. Toronto, Canada"
-    puts "5. Rio de Janeiro, Brazil"
-
+    list_of_cities
     input = gets.strip.to_i
     #latitude = WeatherForecast::Forecast.latitude(input)
     #longitude = WeatherForecast::Forecast.longitude(input)
-    WeatherForecast::API.current_location(latitude,longitude,location)
+    #WeatherForecast::API.current_location(latitude,longitude,location)
     #move the api line within the if statements and breakdown each part to finish the project
     if input == "exit"
       goodbye
     else
       its = input.to_f
       if its != 0
-        fore_input = WeatherForecast::Forecast
+        fore_input = WeatherForecast::API.current_location(latitude,longitude,location)
+        binding.pry
         forecast_details(fore_input)
         puts "Would you like more information for another city?"
         ci = gets.strip.downcase
@@ -56,11 +52,11 @@ class WeatherForecast::CLI
   end
 
   def list_of_cities
-    #List of popular cities longitude and latitude
-    input = gets.strip.to_i
-    latitude = WeatherForecast::Forecast.latitude(input)
-    longitude = WeatherForecast::Forecast.longitude(input)
-    WeatherForecast::API.current_location(latitude, longitude)
+    puts "1. New York, New York"
+    puts "2. London, England"
+    puts "3. Tokyo, Japan"
+    puts "4. Toronto, Canada"
+    puts "5. Rio de Janeiro, Brazil"
   end
 
   def forecast_details(fore_input)
