@@ -14,9 +14,6 @@ class WeatherForecast::CLI
     puts "------ Please choose one of the following cities ------"
     list_of_cities
     input = gets.strip.to_i
-    #latitude = WeatherForecast::Forecast.latitude(input)
-    #longitude = WeatherForecast::Forecast.longitude(input)
-    #WeatherForecast::API.current_location(latitude,longitude,location)
     #move the api line within the if statements and breakdown each part to finish the project
     if input == "exit"
       goodbye
@@ -24,6 +21,7 @@ class WeatherForecast::CLI
       its = input.to_f
       if its != 0
         #find a way to put each of the cities in a case or if..end statement so that it runs through each city to find the weather.
+        #make it similar to .each_index for the method in order to go through each city in the getWeather method
         fore_input = WeatherForecast::Forecast.getWeather
         binding.pry
         forecast_details(fore_input)
@@ -61,9 +59,11 @@ class WeatherForecast::CLI
   end
 
   def forecast_details(fore_input)
-    puts "----#{fore_input.temperature}----"
+    puts "Location: #{fore_input.location}"
+    puts "Temperature#{fore_input.temperature}"
     puts "Humidity: #{fore_input.humidity}"
     puts "WindSpeed: #{fore_input.windSpeed}"
+
   end
 
 #Record up to 30 minutes of code work for the project. Update blog post. Look at the videos for assistance with completing the project and meeting on wednesday more insight on how to complete the second section of the project.

@@ -4,7 +4,7 @@ class WeatherForecast::Forecast
 
 #Pull up the sticky notes for questions with the meeting with the TA to make sure that all of the classes work and the irb works for testing
   def self.new_from_json(fore_info, location)
-    
+
       self.new(
         fore_info["temperature"],
         fore_info["humidity"],
@@ -39,6 +39,7 @@ class WeatherForecast::Forecast
   end
 
   def self.getWeather
+    #why does this only go through one city and not all of the other cities
     WeatherForecast::API.current_location(40.7128, 74.0060, "New York")
     WeatherForecast::API.current_location(51.5074,0.1278, "London, England")
     WeatherForecast::API.current_location(35.6895,139.6917, "Tokyo, Japan")
