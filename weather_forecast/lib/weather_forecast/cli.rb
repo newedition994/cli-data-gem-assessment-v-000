@@ -23,7 +23,8 @@ class WeatherForecast::CLI
     else
       its = input.to_f
       if its != 0
-        fore_input = WeatherForecast::API.current_location(latitude,longitude,location)
+        #find a way to put each of the cities in a case or if..end statement so that it runs through each city to find the weather.
+        fore_input = WeatherForecast::Forecast.getWeather
         binding.pry
         forecast_details(fore_input)
         puts "Would you like more information for another city?"
