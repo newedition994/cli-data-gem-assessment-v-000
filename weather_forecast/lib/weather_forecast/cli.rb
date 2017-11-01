@@ -20,8 +20,8 @@ class WeatherForecast::CLI
     else
       its = input.to_f
       if its != 0
-        #find a way to put each of the cities in a case or if..end statement so that it runs through each city to find the weather.
-        #make it similar to .each_index for the method in order to go through each city in the getWeather method
+        #Iteration trail: WeatherForecast::Forecast.getWeather.each { |c| c.call}
+        #each_with_index: WeatherForecast::Forecast.getWeather.each_with_index do |value, index| ~ probably will not work for this specific problem
         fore_input = WeatherForecast::Forecast.getWeather
         binding.pry
         forecast_details(fore_input)
