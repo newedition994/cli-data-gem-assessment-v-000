@@ -56,6 +56,7 @@ class WeatherForecast::CLI
 
   def forecast_details(fore_input)
     puts "Location: #{fore_input.location}"
+    binding.pry
     puts "Temperature#{fore_input.temperature}"
     puts "Humidity: #{fore_input.humidity}"
     puts "WindSpeed: #{fore_input.windSpeed}"

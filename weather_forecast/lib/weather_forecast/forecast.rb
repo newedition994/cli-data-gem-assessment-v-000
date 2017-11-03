@@ -38,19 +38,24 @@ class WeatherForecast::Forecast
     @windSpeed
   end
 
+  def location
+    @location
+  end
+
   def self.getWeather(input)
     #why does this only go through one city and not all of the other cities
     case input
-    when "1"
+    when input == "1"
       WeatherForecast::API.current_location(40.7128, 74.0060, "New York")
-    when condition
-
+    when input == "2"
+      WeatherForecast::API.current_location(51.5074,0.1278, "London, England")
+    when input == "3"
+      WeatherForecast::API.current_location(35.6895,139.6917, "Tokyo, Japan")
+    when input == "4"
+      WeatherForecast::API.current_location(43.6532,79.3832, "Toronto, Canada")
+    when input == "5"
+      WeatherForecast::API.current_location(22.9068,43.1729, "Rio de Janeiro, Brazil")
     end
-    WeatherForecast::API.current_location(40.7128, 74.0060, "New York")
-    WeatherForecast::API.current_location(51.5074,0.1278, "London, England")
-    WeatherForecast::API.current_location(35.6895,139.6917, "Tokyo, Japan")
-    WeatherForecast::API.current_location(43.6532,79.3832, "Toronto, Canada")
-    WeatherForecast::API.current_location(22.9068,43.1729, "Rio de Janeiro, Brazil")
   end
 
 
