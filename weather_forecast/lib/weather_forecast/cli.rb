@@ -22,7 +22,8 @@ class WeatherForecast::CLI
       if its != 0
         #Iteration trail: WeatherForecast::Forecast.getWeather.each { |c| c.call}
         #each_with_index: WeatherForecast::Forecast.getWeather.each_with_index do |value, index| ~ probably will not work for this specific problem
-        fore_input = WeatherForecast::Forecast.getWeather
+
+        fore_input = WeatherForecast::Forecast.getWeather(input)
         binding.pry
         forecast_details(fore_input)
         puts "Would you like more information for another city?"
@@ -38,11 +39,6 @@ class WeatherForecast::CLI
         menu
       end
     end
-    #create a if statement for more details
-    #puts "Please enter your latitude:"
-    #latitude = gets.strip.to_f
-    #puts "Please enter your longitude:"
-    #longitude = gets.strip.to_f
   end
 #you have to do a gem install RestClient everytime you open IDE
   def goodbye
@@ -66,6 +62,6 @@ class WeatherForecast::CLI
 
   end
 
-#Record up to 30 minutes of code work for the project. Update blog post. Look at the videos for assistance with completing the project and meeting on wednesday more insight on how to complete the second section of the project.
+#Update blog post.
 
 end
