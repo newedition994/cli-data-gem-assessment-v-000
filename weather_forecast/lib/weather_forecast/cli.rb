@@ -1,8 +1,6 @@
 class WeatherForecast::CLI
   #attr_accessor :latitude, :longitude, :location
   def call
-    WeatherForecast::Forecast.getWeather
-
     puts " Welcome to the Weather API!"
     puts ""
     menu
@@ -13,16 +11,13 @@ class WeatherForecast::CLI
     input = nil
     puts "------ Please choose one of the following cities ------"
     list_of_cities
-    input = gets.strip.to_i
+    input = gets.strip
     #move the api line within the if statements and breakdown each part to finish the project
     if input == "exit"
       goodbye
     else
       its = input.to_f
       if its != 0
-        #Iteration trail: WeatherForecast::Forecast.getWeather.each { |c| c.call}
-        #each_with_index: WeatherForecast::Forecast.getWeather.each_with_index do |value, index| ~ probably will not work for this specific problem
-
         fore_input = WeatherForecast::Forecast.getWeather(input)
         binding.pry
         forecast_details(fore_input)
@@ -40,7 +35,7 @@ class WeatherForecast::CLI
       end
     end
   end
-#you have to do a gem install RestClient everytime you open IDE
+
   def goodbye
     puts "See you tomorrow for the temperature"
     exit

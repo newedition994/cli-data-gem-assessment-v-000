@@ -43,8 +43,8 @@ class WeatherForecast::Forecast
   end
 
   def self.getWeather(input)
-    #why does this only go through one city and not all of the other cities
-    case input
+    binding.pry
+    case input 
     when input == "1"
       WeatherForecast::API.current_location(40.7128, 74.0060, "New York")
     when input == "2"
