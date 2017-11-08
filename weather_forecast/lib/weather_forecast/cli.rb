@@ -19,7 +19,6 @@ class WeatherForecast::CLI
       its = input.to_f
       if its != 0
         fore_input = WeatherForecast::Forecast.getWeather(input)
-        binding.pry
         forecast_details(fore_input)
         puts "Would you like more information for another city?"
         ci = gets.strip.downcase
@@ -51,8 +50,7 @@ class WeatherForecast::CLI
 
   def forecast_details(fore_input)
     puts "Location: #{fore_input.location}"
-    binding.pry
-    puts "Temperature#{fore_input.temperature}"
+    puts "Temperature: #{fore_input.temperature}"
     puts "Humidity: #{fore_input.humidity}"
     puts "WindSpeed: #{fore_input.windSpeed}"
 
