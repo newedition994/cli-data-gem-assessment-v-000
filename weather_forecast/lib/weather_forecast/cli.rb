@@ -1,5 +1,5 @@
 class WeatherForecast::CLI
-  #attr_accessor :latitude, :longitude, :location
+
   def call
     puts " Welcome to the Weather API!"
     puts ""
@@ -12,7 +12,6 @@ class WeatherForecast::CLI
     puts "------ Please choose one of the following cities ------"
     list_of_cities
     input = gets.strip
-    #move the api line within the if statements and breakdown each part to finish the project
     if input == "exit"
       goodbye
     else
@@ -55,7 +54,5 @@ class WeatherForecast::CLI
     puts "WindSpeed: #{fore_input.windSpeed}"
 
   end
-
-#Update blog post.
 
 end

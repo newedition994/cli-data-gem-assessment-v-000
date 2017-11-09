@@ -4,8 +4,5 @@ Forecast project structure
  - ask for a number
  - go to more information (temperature, humidity, windSpeed)
  - loop back to list
- - get another number or current location or exit
- - ask user for latitude
- - ask user for longitude
  - latitude and longitude into the scraper link
  - display more details about our location

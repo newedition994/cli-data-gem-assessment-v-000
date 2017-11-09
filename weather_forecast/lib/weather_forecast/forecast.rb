@@ -2,7 +2,6 @@ class WeatherForecast::Forecast
   attr_accessor :longitude, :latitude, :temperature, :humidity, :windSpeed, :location
   @@all = []
 
-#Pull up the sticky notes for questions with the meeting with the TA to make sure that all of the classes work and the irb works for testing
   def self.new_from_json(fore_info, location)
 
       self.new(
@@ -12,7 +11,6 @@ class WeatherForecast::Forecast
         location
       )
   end
-#longitude = fore_info
 
   def initialize(temperature=nil, humidity=nil, windSpeed=nil, location=nil)
     @location = location
