@@ -49,7 +49,7 @@ class WeatherForecast::CLI
   end
 
   def forecast_details(fore_input)
-    puts "Location: #{fore_input.location}"
+    puts "-----Location: #{fore_input.location}-----"
     puts "Temperature: #{fore_input.temperature}"
     puts "Humidity: #{fore_input.humidity}"
     puts "WindSpeed: #{fore_input.windSpeed}"
