@@ -25,8 +25,9 @@ Instructions:
 1. Download the weather_forecast gem
 2. Install rest-client
 3. Type in bin/console
-4. Choose one of the cities that are listed
-5. Type in "yes" or "y" to see the list again or type "exit" or "no" to exit.
+4. Type in WeatherForecast::CLI.new.call
+5. Choose one of the cities that are listed
+6. Type in "yes" or "y" to see the list again or type "exit" or "no" to exit.
 
 
 
