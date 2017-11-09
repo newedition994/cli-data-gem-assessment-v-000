@@ -1,8 +1,6 @@
 # WeatherForecast
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/weather_forecast`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+In this gem you will receive a list of cities around the world and will be prompted to choose one of the 5 to get the temperature, humidity, and windSpeed for that specific city. The prompt will circle through until you type in exit or no then the program will end.
 
 ## Installation
 
@@ -24,8 +22,12 @@ Or install it yourself as:
 
 Instructions:
 
-1. Type in your longitude and latitude
-2. Ask for more information based on location
+1. Download the weather_forecast gem
+2. Install rest-client
+3. Type in bin/console
+4. Choose one of the cities that are listed
+5. Type in "yes" or "y" to see the list again or type "exit" or "no" to exit.
+
 
 
 ## Development

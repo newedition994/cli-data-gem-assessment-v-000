@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Breyanna Vass'"]
   spec.email         = ["'breyanna.bvass@gmail.com'"]
 
-  spec.summary       = %q{Get the temperature for each users location.}
-  spec.description   = %q{User types in their longitude and latitude to get the temperature, humidity and windSpeed for their current location.}
+  spec.summary       = %q{Get the temperature for 5 different locations.}
+  spec.description   = %q{User types in a number that corresponses to a specific city to get the temperature, humidity and windSpeed.}
   spec.homepage      = "https://github.com/newedition994/cli-data-gem-assessment-v-000/tree/master/weather_forecast"
   spec.license       = "MIT"
 
