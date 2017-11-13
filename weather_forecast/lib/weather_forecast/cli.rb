@@ -27,7 +27,7 @@ class WeatherForecast::CLI
           goodbye
         end
       else
-        puts "I don't understand that selection."
+        puts "I don't understnd that selection."
         puts "Please select a city's number, type exit to leave, or get info on your own city"
         menu
       end

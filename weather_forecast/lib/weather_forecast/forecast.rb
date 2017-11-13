@@ -33,7 +33,7 @@ class WeatherForecast::Forecast
       WeatherForecast::API.current_location(22.9068,43.1729, "Rio de Janeiro, Brazil")
     else
       puts "Invalid input"
-      WeatherForecast::CLI.menu
+      WeatherForecast::CLI.new.menu
     end
   end
 
