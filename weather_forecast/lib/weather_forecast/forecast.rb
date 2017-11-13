@@ -1,6 +1,6 @@
 class WeatherForecast::Forecast
   attr_accessor :longitude, :latitude, :temperature, :humidity, :windSpeed, :location
-  @@all = []
+
 
   def self.new_from_json(fore_info, location)
 
@@ -17,27 +17,6 @@ class WeatherForecast::Forecast
     @temperature = temperature
     @humidity = humidity
     @windSpeed = windSpeed
-    @@all << self
-  end
-
-  def self.all
-    @@all
-  end
-
-  def temperature
-    @temperature
-  end
-
-  def humidity
-    @humidity
-  end
-
-  def windSpeed
-    @windSpeed
-  end
-
-  def location
-    @location
   end
 
   def self.getWeather(input)
@@ -54,6 +33,7 @@ class WeatherForecast::Forecast
       WeatherForecast::API.current_location(22.9068,43.1729, "Rio de Janeiro, Brazil")
     else
       puts "Invalid input"
+      WeatherForecast::CLI.menu
     end
   end
 
